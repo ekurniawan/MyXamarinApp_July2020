@@ -18,5 +18,15 @@ namespace MyXamarinApp
         {
             InitializeComponent();
         }
+
+        private void btnSubmit_Clicked(object sender, EventArgs e)
+        {
+            var username = entryUsername.Text;
+            var password = entryPassword.Text;
+            var firstName = entryFirstName.Text;
+            var lastName = entryLastName.Text;
+
+            DisplayAlert("Keterangan", $"Welcome {firstName} {lastName}", "OK");
+        }
     }
 }
