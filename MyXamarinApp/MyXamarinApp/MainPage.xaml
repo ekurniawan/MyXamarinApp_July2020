@@ -6,16 +6,37 @@
              mc:Ignorable="d"
              x:Class="MyXamarinApp.MainPage">
 
-    <StackLayout>
-        <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" FontSize="Medium" TextColor="Red" />
-        <Label Text="Belajar Xamarin" FontSize="Medium" TextColor="Green" />
-        <Label Text="Insert Username" FontSize="Medium" TextColor="Navy" />
-        <Entry Placeholder="insert username" />
-        <StackLayout Orientation="Horizontal">
-            <Button Text="Submit" />
-            <Button Text="Cancel" />
+    <ScrollView>
+        <StackLayout>
+            <Label Text="Insert Username :" FontSize="Medium" TextColor="Navy" />
+            <Entry Placeholder="insert username" />
+            <Label Text="Insert Password :" FontSize="Medium" TextColor="Navy" />
+            <Entry Placeholder="insert password" IsPassword="True" />
+            <Label Text="First Name :" FontSize="Medium" TextColor="Navy" />
+            <Entry Placeholder="insert first name"  />
+            <Label Text="Last Name :" FontSize="Medium" TextColor="Navy"/>
+            <Entry Placeholder="insert last name" />
+            <Label Text="First Name :" FontSize="Medium" TextColor="Navy" />
+            <Entry Placeholder="insert first name"  />
+            <Label Text="Last Name :" FontSize="Medium" TextColor="Navy"/>
+            <Entry Placeholder="insert last name" />
+
+            <Label Text="First Name :" FontSize="Medium" TextColor="Navy" />
+            <Entry Placeholder="insert first name"  />
+            <Label Text="Last Name :" FontSize="Medium" TextColor="Navy"/>
+            <Entry Placeholder="insert last name" />
+
+            <Label Text="First Name :" FontSize="Medium" TextColor="Navy" />
+            <Entry Placeholder="insert first name"  />
+            <Label Text="Last Name :" FontSize="Medium" TextColor="Navy"/>
+            <Entry Placeholder="insert last name" />
+
+            <StackLayout Orientation="Horizontal">
+                <Button Text="Submit" />
+                <Button Text="Cancel" />
+            </StackLayout>
         </StackLayout>
-    </StackLayout>
+    </ScrollView>
+   
 
 </ContentPage>
