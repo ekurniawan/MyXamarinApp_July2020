@@ -9,6 +9,8 @@ namespace MyXamarinApp
         public App()
         {
             InitializeComponent();
+
+            //Device.SetFlags(new string[] { "RadioButton_Experimental" });
             MainPage = new SampleGridLayout();
         }
 

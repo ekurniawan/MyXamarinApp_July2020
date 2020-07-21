@@ -15,7 +15,14 @@ namespace MyXamarinApp
         public SampleGridLayout()
         {
             InitializeComponent();
+
             btnTambah.Clicked += BtnProses_Clicked;
+
+            List<string> listKota = new List<string>
+            {
+                "Jakarta","Bandung","Surabaya","Yogyakarta"
+            };
+            pickerCity.ItemsSource = listKota;
         }
 
         private void BtnProses_Clicked(object sender, EventArgs e)

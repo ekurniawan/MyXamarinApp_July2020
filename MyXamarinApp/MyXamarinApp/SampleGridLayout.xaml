@@ -16,7 +16,10 @@
                 <RowDefinition Height="40" />
                 <RowDefinition Height="40" />
                 <RowDefinition Height="40" />
-                <RowDefinition Height="*" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="60" />
+                <RowDefinition Height="40" />
+                
             </Grid.RowDefinitions>
             <Label Text="Bilangan 1 :" Grid.Row="0" Grid.Column="0"
                    VerticalOptions="Center" HorizontalOptions="End" />
@@ -39,6 +42,16 @@
                 <Button x:Name="btnBagi" Text="Bagi" FontSize="Small"
                         Clicked="BtnProses_Clicked"/>
             </StackLayout>
+            <DatePicker x:Name="dpTanggal" Grid.Column="0" Grid.Row="4" />
+            <Image Source="monkey1.png" Grid.Column="0" Grid.Row="5" 
+                   VerticalOptions="Start" />
+            <StackLayout Orientation="Horizontal" Grid.ColumnSpan="2" Grid.Column="0" Grid.Row="6">
+                <CheckBox x:Name="chkMale" />
+                <Label Text="Male" />
+                <Switch x:Name="rdFemale" />
+                <Picker x:Name="pickerCity" WidthRequest="120" />
+            </StackLayout>
+            
         </Grid>
     </ContentPage.Content>
 </ContentPage>
