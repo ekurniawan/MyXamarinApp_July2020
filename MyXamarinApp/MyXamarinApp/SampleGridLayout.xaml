@@ -18,6 +18,27 @@
                 <RowDefinition Height="40" />
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
+            <Label Text="Bilangan 1 :" Grid.Row="0" Grid.Column="0"
+                   VerticalOptions="Center" HorizontalOptions="End" />
+            <Entry x:Name="entryBil1" Placeholder="insert bilangan 1" Grid.Row="0" 
+                   Grid.Column="1" Keyboard="Numeric" />
+            <Label Text="Bilangan 2 :" Grid.Row="1" Grid.Column="0"
+                   VerticalOptions="Center" HorizontalOptions="End" />
+            <Entry x:Name="entryBil2" Placeholder="insert bilangan 2" Grid.Row="1" 
+                   Grid.Column="1" Keyboard="Numeric" />
+            <Label Text="Hasil :" Grid.Row="2" Grid.Column="0"
+                   VerticalOptions="Center" HorizontalOptions="End" />
+            <Entry x:Name="entryHasil" IsReadOnly="True" Grid.Row="2" 
+                   Grid.Column="1" />
+            <StackLayout  Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2"  Orientation="Horizontal">
+                <Button x:Name="btnTambah" Text="Tambah" FontSize="Small" />
+                <Button x:Name="btnKurang" Text="Kurang" FontSize="Small" 
+                        Clicked="BtnProses_Clicked" />
+                <Button x:Name="btnKali" Text="Kali" FontSize="Small"
+                        Clicked="BtnProses_Clicked"/>
+                <Button x:Name="btnBagi" Text="Bagi" FontSize="Small"
+                        Clicked="BtnProses_Clicked"/>
+            </StackLayout>
         </Grid>
     </ContentPage.Content>
 </ContentPage>
