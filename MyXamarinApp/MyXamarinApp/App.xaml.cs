@@ -9,8 +9,7 @@ namespace MyXamarinApp
         public App()
         {
             InitializeComponent();
-
-            MainPage = new MainPage();
+            MainPage = new SampleGridLayout();
         }
 
         protected override void OnStart()
