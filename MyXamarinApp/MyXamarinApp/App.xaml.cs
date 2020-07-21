@@ -11,7 +11,7 @@ namespace MyXamarinApp
             InitializeComponent();
 
             //Device.SetFlags(new string[] { "RadioButton_Experimental" });
-            MainPage = new SampleListString();
+            MainPage = new SampleListBinding();
         }
 
         protected override void OnStart()

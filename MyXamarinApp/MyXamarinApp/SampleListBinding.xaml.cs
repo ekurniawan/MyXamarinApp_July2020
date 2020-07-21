@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MyXamarinApp.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,24 @@ namespace MyXamarinApp
         public SampleListBinding()
         {
             InitializeComponent();
+
+            List<ListItem> lstItems = new List<ListItem>();
+            lstItems.Add(new ListItem
+            {
+                Title = "Xamarin Android",
+                Description = "Xamarin with Traditional Android UI"
+            });
+            lstItems.Add(new ListItem
+            {
+                Title = "Xamarin IOS",
+                Description = "Xamarin with Traditional IOS UI"
+            });
+            lstItems.Add(new ListItem
+            {
+                Title = "Xamarin Forms",
+                Description = "Xamarin with Cross Platform UI"
+            });
+            lvData.ItemsSource = lstItems;
         }
     }
 }
