@@ -18,10 +18,10 @@ namespace MyXamarinApp
 
             btnTambah.Clicked += BtnProses_Clicked;
 
-            List<string> listKota = new List<string>
-            {
-                "Jakarta","Bandung","Surabaya","Yogyakarta"
-            };
+            List<string> listKota = new List<string>();
+            listKota.Add("Jakarta");
+            listKota.Add("Surabaya");
+            listKota.Add("Yogyakarta");
             pickerCity.ItemsSource = listKota;
         }
 
