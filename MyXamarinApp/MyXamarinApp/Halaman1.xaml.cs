@@ -12,6 +12,7 @@ namespace MyXamarinApp
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Halaman1 : ContentPage
     {
+        //
         public Halaman1()
         {
             InitializeComponent();
