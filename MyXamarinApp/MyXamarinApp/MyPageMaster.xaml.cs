@@ -34,17 +34,17 @@ namespace MyXamarinApp
                 MenuItems = new ObservableCollection<MyPageMasterMenuItem>(new[]
                 {
                     new MyPageMasterMenuItem { Id = 0, Title = "Main Menu",
-                    TargetType=typeof(MenuPage)},
+                    TargetType=typeof(MenuPage),ImageSource="addicon.png"},
                     new MyPageMasterMenuItem { Id = 1, Title = "Custom List",
-                    TargetType=typeof(SampleCustomList)},
+                    TargetType=typeof(SampleCustomList),ImageSource="addicon.png"},
                     new MyPageMasterMenuItem { Id = 2, Title = "Image List",
-                    TargetType=typeof(SampleImageList)},
+                    TargetType=typeof(SampleImageList),ImageSource="addicon.png"},
                     new MyPageMasterMenuItem { Id = 3, Title = "My Tab",
-                    TargetType=typeof(MyTabbedPage)},
+                    TargetType=typeof(MyTabbedPage),ImageSource="addicon.png"},
                     new MyPageMasterMenuItem { Id = 4, Title = "Binding List",
-                    TargetType=typeof(SampleListBinding)},
+                    TargetType=typeof(SampleListBinding),ImageSource="addicon.png"},
                     new MyPageMasterMenuItem {Id=5,Title="Simple List",
-                    TargetType=typeof(SampleListString)}
+                    TargetType=typeof(SampleListString),ImageSource="addicon.png"}
                 });
             }
 
