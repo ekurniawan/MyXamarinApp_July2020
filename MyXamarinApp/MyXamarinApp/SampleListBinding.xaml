@@ -7,7 +7,7 @@
              x:Class="MyXamarinApp.SampleListBinding">
     <ContentPage.Content>
         <StackLayout>
-            <ListView x:Name="lvData">
+            <ListView x:Name="lvData" ItemTapped="lvData_ItemTapped">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <TextCell Text="{Binding Title}" TextColor="Black" 
