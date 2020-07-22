@@ -52,5 +52,10 @@ namespace MyXamarinApp
             else
                 await DisplayAlert("Keterangan", "Anda menjawab No", "OK");
         }
+
+        private async void btnHal1_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Halaman1());
+        }
     }
 }

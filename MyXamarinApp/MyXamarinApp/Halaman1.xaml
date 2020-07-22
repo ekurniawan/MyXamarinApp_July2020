@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" Title="Halaman 1"
+             x:Class="MyXamarinApp.Halaman1">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Masukan Nama Lengkap :"/>
+            <Entry x:Name="entryNama" Placeholder="masukan nama lengkap" />
+            <Button x:Name="btnKeHal2" Text="Ke Hal 2" Clicked="btnKeHal2_Clicked" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
