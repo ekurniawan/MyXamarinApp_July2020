@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" Title="Sample Tab Page"
+             x:Class="MyXamarinApp.MyTabbedPage"
+             xmlns:local="clr-namespace:MyXamarinApp"
+            NavigationPage.HasNavigationBar="False">
+  <!--Pages can be added as references or inline-->
+    <local:SampleCustomList Title="Custom List" IconImageSource="addicon.png" />
+    <local:SampleImageList Title="Image List" IconImageSource="addicon.png" />
+    <ContentPage Title="Tab 1" IconImageSource="addicon.png">
+        <Label Text="Tampilan Tab 1" FontSize="Large" />
+    </ContentPage>
+</TabbedPage>

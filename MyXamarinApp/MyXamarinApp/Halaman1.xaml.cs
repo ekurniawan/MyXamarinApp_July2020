@@ -39,6 +39,9 @@ namespace MyXamarinApp
             if (Preferences.ContainsKey("password"))
                 password = Preferences.Get("password", "");
             await DisplayAlert("Keterangan", $"Username:{username}, Password:{password}", "OK");
+
+            //Preferences.Remove("username");
+            //Preferences.Clear();
         }
     }
 }
