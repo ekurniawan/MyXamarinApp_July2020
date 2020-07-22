@@ -21,17 +21,20 @@ namespace MyXamarinApp
             lstItems.Add(new ListItem
             {
                 Title = "Xamarin Android",
-                Description = "Xamarin with Traditional Android UI"
+                Description = "Xamarin with Traditional Android UI",
+                ImageSource = "monkey1.png"
             });
             lstItems.Add(new ListItem
             {
                 Title = "Xamarin IOS",
-                Description = "Xamarin with Traditional IOS UI"
+                Description = "Xamarin with Traditional IOS UI",
+                ImageSource = "monkey2.png"
             });
             lstItems.Add(new ListItem
             {
                 Title = "Xamarin Forms",
-                Description = "Xamarin with Cross Platform UI"
+                Description = "Xamarin with Cross Platform UI",
+                ImageSource = "monkey3.png"
             });
             lvData.ItemsSource = lstItems;
         }
