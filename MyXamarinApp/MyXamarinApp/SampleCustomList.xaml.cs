@@ -48,5 +48,11 @@ namespace MyXamarinApp
             await DisplayAlert("Keterangan",
             $"Title: {item.Title}\n Desc:{item.Description}\n Price: Rp.{item.Price}","OK");
         }
+
+        private async void Button_Clicked(object sender, EventArgs e)
+        {
+            var myBtn = (Button)sender;
+            await DisplayAlert("Keterangan", $"Title: {myBtn.CommandParameter}", "OK");
+        }
     }
 }
