@@ -15,6 +15,9 @@
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
+            <Button x:Name="btnCustomList" Text="Custom List" 
+                    Clicked="btnCustomList_Clicked" />
+            <Button x:Name="btnBack" Text="Back" Clicked="btnBack_Clicked" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" Title="Menu Page"
+             x:Class="MyXamarinApp.MenuPage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem x:Name="menuCustomList" Text="Custom List" Order="Secondary" 
+                     Clicked="menuCustomList_Clicked"/>
+        <ToolbarItem x:Name="menuBindingList" Text="Binding List" Order="Secondary"
+                     Clicked="menuBindingList_Clicked"/>
+        <ToolbarItem x:Name="menuAdd" Order="Primary" IconImageSource="addicon.png" Clicked="menuAdd_Clicked" />
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout>
+            <Button x:Name="btnImageList" Text="Image List" 
+                    Clicked="btnImageList_Clicked" />
+            <Button x:Name="btnActionSheet" Text="Action Sheet" Clicked="btnActionSheet_Clicked" />
+            <Button x:Name="btnDisplay" Text="Display Alert" Clicked="btnDisplay_Clicked" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

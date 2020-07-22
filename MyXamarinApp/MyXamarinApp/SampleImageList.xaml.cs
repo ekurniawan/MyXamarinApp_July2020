@@ -38,5 +38,15 @@ namespace MyXamarinApp
             });
             lvData.ItemsSource = lstItems;
         }
+
+        private async void btnCustomList_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new SampleCustomList());
+        }
+
+        private async void btnBack_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PopAsync();
+        }
     }
 }
