@@ -7,7 +7,7 @@
              x:Class="MyXamarinApp.SampleCustomList">
     <ContentPage.Content>
         <StackLayout>
-            <ListView x:Name="lvData" HasUnevenRows="True">
+            <ListView x:Name="lvData" HasUnevenRows="True" ItemTapped="lvData_ItemTapped">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>

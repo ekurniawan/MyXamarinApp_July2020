@@ -41,5 +41,12 @@ namespace MyXamarinApp
             });
             lvData.ItemsSource = lstItems;
         }
+
+        private async void lvData_ItemTapped(object sender, ItemTappedEventArgs e)
+        {
+            var item = (ListItem)e.Item;
+            await DisplayAlert("Keterangan",
+            $"Title: {item.Title}\n Desc:{item.Description}\n Price: Rp.{item.Price}","OK");
+        }
     }
 }
