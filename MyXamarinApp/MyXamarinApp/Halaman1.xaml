@@ -10,6 +10,9 @@
             <Label Text="Masukan Nama Lengkap :"/>
             <Entry x:Name="entryNama" Placeholder="masukan nama lengkap" />
             <Button x:Name="btnKeHal2" Text="Ke Hal 2" Clicked="btnKeHal2_Clicked" />
+            <Button x:Name="btnGlobal" Text="Global Variabel" Clicked="btnGlobal_Clicked" />
+            <Button x:Name="btnGetPreference" Text="Get Preference" 
+                    Clicked="btnGetPreference_Clicked" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

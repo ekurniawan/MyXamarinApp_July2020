@@ -48,5 +48,13 @@ namespace MyXamarinApp
         {
             await Navigation.PopAsync();
         }
+
+        private async void btnGlobal_Clicked(object sender, EventArgs e)
+        {
+            var nama = Global.Instance.Name;
+            var address = Global.Instance.Address;
+            lblNama.Text = nama;
+            await DisplayAlert("Keterangan", $"Nama: {nama}, Address:{address}", "OK");
+        }
     }
 }

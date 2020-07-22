@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using Xamarin.Essentials;
 
 namespace MyXamarinApp
 {
@@ -56,6 +57,13 @@ namespace MyXamarinApp
         private async void btnHal1_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new Halaman1());
+        }
+
+        private async void btnPreference_Clicked(object sender, EventArgs e)
+        {
+            Preferences.Set("username", "erick");
+            Preferences.Set("password", "rahasia");
+            await DisplayAlert("Keterangan", "Objek Preference berhasil dibuat", "OK");
         }
     }
 }
