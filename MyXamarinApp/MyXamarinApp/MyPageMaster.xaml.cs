@@ -35,6 +35,8 @@ namespace MyXamarinApp
                 {
                     new MyPageMasterMenuItem { Id = 0, Title = "Main Menu",
                     TargetType=typeof(MenuPage),ImageSource="addicon.png"},
+                    new MyPageMasterMenuItem { Id = 5, Title = "Setup Employee",
+                    TargetType=typeof(ShowEmployeePage),ImageSource="addicon.png"},
                     new MyPageMasterMenuItem { Id = 1, Title = "Custom List",
                     TargetType=typeof(SampleCustomList),ImageSource="addicon.png"},
                     new MyPageMasterMenuItem { Id = 2, Title = "Image List",

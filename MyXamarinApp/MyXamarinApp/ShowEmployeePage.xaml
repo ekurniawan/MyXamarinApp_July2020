@@ -10,6 +10,7 @@
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <StackLayout>
+            <Entry x:Name="entrySearch" TextChanged="entrySearch_TextChanged" />
             <ListView x:Name="lvEmployee" IsPullToRefreshEnabled="True" 
                       Refreshing="lvEmployee_Refreshing" 
                       ItemTapped="lvEmployee_ItemTapped">

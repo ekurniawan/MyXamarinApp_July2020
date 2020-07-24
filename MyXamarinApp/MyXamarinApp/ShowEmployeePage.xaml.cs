@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -23,7 +23,15 @@ namespace MyXamarinApp
 
         private async Task LoadData()
         {
-            lvEmployee.ItemsSource = await _empServices.GetAll();
+            var current = Connectivity.NetworkAccess;
+            if (current == NetworkAccess.Internet)
+            {
+                lvEmployee.ItemsSource = await _empServices.GetAll();
+            }
+            else
+            {
+                await DisplayAlert("Keterangan", "Tidak ada koneksi internet...","OK");
+            }
         }
 
         protected async override void OnAppearing()
@@ -69,6 +77,15 @@ namespace MyXamarinApp
                 {
                     await DisplayAlert("Kesalahan", ex.Message, "OK");
                 }
+            }
+        }
+
+        private async void entrySearch_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (entrySearch.Text.Length >= 3)
+            {
+                var data = await _empServices.GetByName(entrySearch.Text);
+                lvEmployee.ItemsSource = data;
             }
         }
     }

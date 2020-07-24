@@ -36,6 +36,27 @@ namespace MyXamarinApp.Services
             }
         }
 
+
+        public async Task<List<Employee>> GetByName(string name)
+        {
+            List<Employee> lstEmp = new List<Employee>();
+            var uri = new Uri($"{Helpers.Helpers.restUrl}/api/Employee?name={name}");
+            try
+            {
+                var response = await _client.GetAsync(uri);
+                if (response.IsSuccessStatusCode)
+                {
+                    var content = await response.Content.ReadAsStringAsync();
+                    lstEmp = JsonConvert.DeserializeObject<List<Employee>>(content);
+                }
+                return lstEmp;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
         public async Task Insert(Employee emp)
         {
             var uri = new Uri($"{Helpers.Helpers.restUrl}/api/Employee");

@@ -8,12 +8,14 @@ namespace MyXamarinApp
     {
         public App()
         {
+            Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("");
+
             InitializeComponent();
 
             //Device.SetFlags(new string[] { "RadioButton_Experimental" });
-            MainPage = new NavigationPage(new ShowEmployeePage());
+            //MainPage = new NavigationPage(new ShowEmployeePage());
 
-            //MainPage = new MyPage();
+            MainPage = new MyPage();
         }
 
         protected override void OnStart()
