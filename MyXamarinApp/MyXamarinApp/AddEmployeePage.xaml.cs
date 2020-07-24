@@ -23,15 +23,17 @@ namespace MyXamarinApp
 
         private async void btnSave_Clicked(object sender, EventArgs e)
         {
+            var newEmp = new Employee
+            {
+                EmployeeName = entryName.Text,
+                Designation = entryDesignation.Text,
+                Qualification = entryQualification.Text,
+                Department = entryDepartment.Text
+            };
+
             try
             {
-                var newEmp = new Employee
-                {
-                    EmployeeName = entryName.Text,
-                    Designatiom = entryDesignation.Text,
-                    Qualification = entryQualification.Text,
-                    Department = entryDepartment.Text
-                };
+                
                 await _empServices.Insert(newEmp);
                 await DisplayAlert("Keterangan",
                     $"Data Employee {newEmp.EmployeeName} berhasil ditambahkan", "OK");

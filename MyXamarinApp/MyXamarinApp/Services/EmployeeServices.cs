@@ -45,7 +45,9 @@ namespace MyXamarinApp.Services
                 var content = new StringContent(jsonData, Encoding.UTF8, "application/json");
                 var response = await _client.PostAsync(uri, content);
                 if (!response.IsSuccessStatusCode)
+                {
                     throw new Exception("Gagal menambahkan data employee");
+                }   
             }
             catch (Exception ex)
             {
