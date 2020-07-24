@@ -50,5 +50,26 @@ namespace MyXamarinApp
             editEmpPage.BindingContext = item;
             await Navigation.PushAsync(editEmpPage);
         }
+
+        private async void MenuItem_Clicked(object sender, EventArgs e)
+        {
+            var menuItem = (MenuItem)sender;
+            var empId = Convert.ToInt32(menuItem.CommandParameter); 
+            var konfirmasi = await DisplayAlert("Konfirmasi", 
+                $"Apakah anda yakin delete data id: {empId}", "Yes","No");
+            if (konfirmasi)
+            {
+                try
+                {
+                    await _empServices.Delete(empId);
+                    await DisplayAlert("Keterangan", $"Data dengan id {empId} berhasil didelete", "OK");
+                    await LoadData();
+                }
+                catch (Exception ex)
+                {
+                    await DisplayAlert("Kesalahan", ex.Message, "OK");
+                }
+            }
+        }
     }
 }

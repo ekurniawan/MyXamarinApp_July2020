@@ -71,5 +71,20 @@ namespace MyXamarinApp.Services
                 throw new Exception(ex.Message);
             }
         }
+
+        public async Task Delete(int id)
+        {
+            var uri = new Uri($"{Helpers.Helpers.restUrl}/api/Employee/{id}");
+            try
+            {
+                var response = await _client.DeleteAsync(uri);
+                if (!response.IsSuccessStatusCode)
+                    throw new Exception("Gagal mendelete data");
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
     }
 }

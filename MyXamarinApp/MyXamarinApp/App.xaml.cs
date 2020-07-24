@@ -12,6 +12,7 @@ namespace MyXamarinApp
 
             //Device.SetFlags(new string[] { "RadioButton_Experimental" });
             MainPage = new NavigationPage(new ShowEmployeePage());
+
             //MainPage = new MyPage();
         }
 
