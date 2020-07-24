@@ -7,7 +7,7 @@
              x:Class="MyXamarinApp.SampleGeolocation">
     <ContentPage.Content>
         <StackLayout>
-            <Button x:Name="btnGeoLocation" Text="Geolocation" />
+            <Button x:Name="btnGeoLocation" Text="Geolocation" Clicked="btnGeoLocation_Clicked" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
