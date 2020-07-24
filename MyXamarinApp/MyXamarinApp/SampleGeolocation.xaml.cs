@@ -23,10 +23,13 @@ namespace MyXamarinApp
             {
                 var request = new GeolocationRequest(GeolocationAccuracy.Medium);
                 var location = await Geolocation.GetLocationAsync(request);
+                double latitude=location.Latitude, longitude=location.Longitude; 
                 if (location != null)
                 {
                     await DisplayAlert("Keterangan",
                         $"Lat: {location.Latitude} Long: {location.Longitude} Alt: {location.Altitude}", "OK");
+                    var options = new MapLaunchOptions { Name = "Posisi Supir" };
+                    await Map.OpenAsync(location, options);
                 }
             }
             catch (Exception ex)

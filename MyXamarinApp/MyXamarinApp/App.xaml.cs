@@ -6,6 +6,7 @@ namespace MyXamarinApp
 {
     public partial class App : Application
     {
+        //Xam.Plugin.Media
         public App()
         {
             Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("");
@@ -13,9 +14,9 @@ namespace MyXamarinApp
             InitializeComponent();
 
             //Device.SetFlags(new string[] { "RadioButton_Experimental" });
-            MainPage = new NavigationPage(new SampleGeolocation());
+            //MainPage = new NavigationPage(new SampleGeolocation());
 
-            //MainPage = new MyPage();
+            MainPage = new MyPage();
         }
 
         protected override void OnStart()
