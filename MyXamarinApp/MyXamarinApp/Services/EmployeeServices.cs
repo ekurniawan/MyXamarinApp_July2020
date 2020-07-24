@@ -54,5 +54,22 @@ namespace MyXamarinApp.Services
                 throw new Exception(ex.Message);
             }
         } 
+
+        public async Task Edit(Employee emp)
+        {
+            var uri = new Uri($"{Helpers.Helpers.restUrl}/api/Employee");
+            try
+            {
+                var jsonData = JsonConvert.SerializeObject(emp);
+                var content = new StringContent(jsonData, Encoding.UTF8, "application/json");
+                var response = await _client.PutAsync(uri, content);
+                if (!response.IsSuccessStatusCode)
+                    throw new Exception("Data gagal diupdate");
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
     }
 }

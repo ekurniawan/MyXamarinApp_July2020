@@ -10,7 +10,9 @@
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <StackLayout>
-            <ListView x:Name="lvEmployee">
+            <ListView x:Name="lvEmployee" IsPullToRefreshEnabled="True" 
+                      Refreshing="lvEmployee_Refreshing" 
+                      ItemTapped="lvEmployee_ItemTapped">
                 <ListView.Header>
                     <Grid BackgroundColor="Navy">
                         <Grid.ColumnDefinitions>
