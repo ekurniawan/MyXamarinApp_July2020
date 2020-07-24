@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" Title="Add Employee"
+             x:Class="MyXamarinApp.AddEmployeePage">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="40" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="120" />
+                <ColumnDefinition Width="120*" />
+                <ColumnDefinition Width="15" />
+            </Grid.ColumnDefinitions>
+            <Label Text="Employee Name :" Grid.Row="0" Grid.Column="0" VerticalOptions="Center"
+                   HorizontalOptions="End" />
+            <Entry x:Name="entryName" Placeholder="insert emp name" Grid.Row="0" Grid.Column="1" />
+
+            <Label Text="Designation :" Grid.Row="1" Grid.Column="0" VerticalOptions="Center"
+                   HorizontalOptions="End" />
+            <Entry x:Name="entryDesignation" Placeholder="insert designation" Grid.Row="1" Grid.Column="1" />
+
+            <Label Text="Qualification :" Grid.Row="2" Grid.Column="0" VerticalOptions="Center" 
+                   HorizontalOptions="End" />
+            <Entry x:Name="entryQualification" Placeholder="insert qualification" Grid.Row="2" Grid.Column="1" />
+
+            <Label Text="Department :" Grid.Row="3" Grid.Column="0" VerticalOptions="Center" 
+                   HorizontalOptions="End" />
+            <Entry x:Name="entryDepartment" Placeholder="insert department" Grid.Row="3" Grid.Column="1" />
+
+            <Button x:Name="btnSave" Text="Save" Grid.Row="4" Grid.Column="1" 
+                    HorizontalOptions="End" Clicked="btnSave_Clicked" />
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

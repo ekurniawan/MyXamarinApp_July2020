@@ -6,7 +6,7 @@
              mc:Ignorable="d" Title="Show Employee"
              x:Class="MyXamarinApp.ShowEmployeePage">
     <ContentPage.ToolbarItems>
-        <ToolbarItem x:Name="menuAddEmp" IconImageSource="addicon.png" />
+        <ToolbarItem x:Name="menuAddEmp" IconImageSource="addicon.png" Clicked="menuAddEmp_Clicked" />
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <StackLayout>
@@ -54,11 +54,7 @@
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>
-                <ListView.Footer>
-                    <StackLayout Orientation="Horizontal">
-                        <Button x:Name="btnAdd" Text="Add Employee" />
-                    </StackLayout>
-                </ListView.Footer>
+               
             </ListView>
         </StackLayout>
     </ContentPage.Content>

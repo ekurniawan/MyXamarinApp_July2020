@@ -25,5 +25,10 @@ namespace MyXamarinApp
             base.OnAppearing();
             lvEmployee.ItemsSource = await _empServices.GetAll();
         }
+
+        private async void menuAddEmp_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new AddEmployeePage());
+        }
     }
 }
